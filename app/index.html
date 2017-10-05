@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-do-list</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body class="container">
+	<h1>To-do-list</h1>
+
+	<div id="list">
+
+		<input  v-model="newTask" v-on:keyup.enter="addTask" placeholder="Please enter a task" type="text">
+		<ul>
+			<li is="task-item" v-for="(task, index) in tasks" v-bind:key="task.id" v-bind:title="task.title" v-on:remove="tasks.splice(index, 1)">
+			 </li>
+		</ul>
+	</div>
+
+
+
+   	<script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
