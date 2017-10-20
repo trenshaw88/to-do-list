@@ -10,7 +10,7 @@
 
 	<div id="list">
 
-		<input  v-model="newTask" v-on:keyup.enter="addTask" placeholder="Please enter a task" type="text">
+		<input   size ="40" v-model="newTask" v-on:keyup.enter="addTask" placeholder="Please enter a task" type="text">
 		<ul>
 			<li is="task-item" v-for="(task, index) in tasks" v-bind:key="task.id" v-bind:title="task.title" v-on:remove="tasks.splice(index, 1)">
 			 </li>
